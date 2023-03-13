@@ -66,7 +66,9 @@ function GetRandomInt(max,min) {
 }
 
 function StartDiceGame(){
-
+    let userNum = GetRandomInt(diceGameNumMax,diceGameNumMin);
+    let computerNum = GetRandomInt(diceGameNumMax,diceGameNumMin);
+    console.log(userNum>computerNum?"Player win!":(userNum!=computerNum?"Computer win!":"Same result, parity!"));
 }
 
 let passedEmail = "mail1@gmail.com";
