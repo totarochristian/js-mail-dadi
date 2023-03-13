@@ -39,10 +39,21 @@ function ShowModalMessage(message){
     $('#exampleModal').modal('show');
 }
 
+/**
+ * Function that will check the game result and return a specific number
+ * @param {bigint} user Random integer of the user
+ * @param {bigint} computer Random integer of the computer
+ * @returns {bigint} Integer that will be 0 if the player win, 1 if the computer win or 2 if is parity
+ */
 function CheckGameResult(user, computer){
     return user>computer?0:(user!=computer?1:2);
 }
 
+/**
+ * Function that will return a string message to be used in the modal as text
+ * @param {string} result Result obtained by the function CheckGameResult
+ * @returns String message that announce the winner of the game
+ */
 function GetResultString(result){
     switch(result){
         case 0: return playerWinMessage;
@@ -50,7 +61,12 @@ function GetResultString(result){
         case 2: return parityMessage;
     }
 }
-
+/**
+ * Function that will set the value and some class attributes to a specific element of the index page with passed id
+ * @param {string} id Id of the element score to select
+ * @param {bigint} value Value to specify in the span of the element
+ * @param {boolean} winner Boolean that will decide if set the class winner or class loser to the element
+ */
 function ApplyResult(id,value,winner){
     //Remove classes added previously
     document.getElementById(id).classList.remove("winner");
