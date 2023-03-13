@@ -41,11 +41,15 @@ const diceGameNumMin = 1;
 /** Maximum number generable in the random function of the dice game */
 const diceGameNumMax = 6;
 
+const playerWinMessage = "Congratulazioni, hai vinto la partita!";
+const computerWinMessage = "Che sfortuna... il computer ha vinto la partita!";
+const parityMessage = "La sorte non ti sorride, ma poteva andare peggio... parità!";
+
 function Main(){
     let passedEmail = document.getElementById("exampleInputEmail1").value;
     console.log("Mail: " + passedEmail);
     if(CheckIfMailIsValid(passedEmail))
-        StartDiceGame();
+        SetupDiceGame();
     else
         ShowModalMessage("La mail inserita non è valida!");
 }
@@ -54,3 +58,4 @@ document.getElementById("resetBtn").addEventListener("click",function(){
     document.getElementById("exampleInputEmail1").value= "";
 });
 document.getElementById("loginBtn").addEventListener("click",Main);
+document.getElementById("startGameBtn").addEventListener("click",PlayDiceGame);

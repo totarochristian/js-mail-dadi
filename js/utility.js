@@ -23,24 +23,27 @@ function GetRandomInt(max,min) {
 }
 
 /**
- * Function that generate 2 random int from diceGameNumMin and diceGameNumMax, one for user and one for computer.
- * If the user num is greater then the computers num but the 2 numbers are different, this method print "User win", otherwise,
- * if the two number are different and the computer num is greater then the user num, the method print "Computer win!", otherwise,
- * the method print "Same result, parity!".
+ * Function that will toggle the mail and dice d-none property (hide the mail div and show the dice div)
  */
-function StartDiceGame(){
+function SetupDiceGame(){
     document.getElementById("mail").classList.toggle("d-none");
     document.getElementById("dice").classList.toggle("d-none");
-    let userNum = GetRandomInt(diceGameNumMax,diceGameNumMin);
-    let computerNum = GetRandomInt(diceGameNumMax,diceGameNumMin);
-    console.log(userNum>computerNum?"Player win!":(userNum!=computerNum?"Computer win!":"Same result, parity!"));
 }
 
 /**
- * FUnction that show a passed message as body text of a modal
+ * Function that show a passed message as body text of a modal
  * @param {string} message Message to show inside the modal
  */
 function ShowModalMessage(message){
     document.getElementById("modal-body-text").innerHTML = message;
     $('#exampleModal').modal('show');
+}
+
+function PlayDiceGame(){
+    let userNum = GetRandomInt(diceGameNumMax,diceGameNumMin);
+    let computerNum = GetRandomInt(diceGameNumMax,diceGameNumMin);
+
+    document.getElementById("computer-score").innerHTML = computerNum;
+    document.getElementById("player-score").innerHTML = userNum;
+    ShowModalMessage(userNum>computerNum?playerWinMessage:(userNum!=computerNum?computerWinMessage:parityMessage));
 }
