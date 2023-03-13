@@ -18,18 +18,24 @@
     <script type="text/javascript" src="./js/script.js" defer></script>
     
 </head>
-<body>
-    <h1>Dice game</h1>
-    <div class="container-fluid">
+<body class="bg-dark">
+    <div id="hero">
+        <div id="hero-background">
+            <img src="./img/hero.jpg" alt="Immagine con dei dadi">
+        </div>
+        <div id="hero-content" class="d-flex justify-content-center align-items-center">
+            <h1 class="text-white ct-fs-large">Dice game</h1>
+        </div>
+    </div>
+    <div id="mail" class="container-fluid text-white mt-4">
         <h2>Inserisci le tue credenziali</h2>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Indirizzo email</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">Inserisci "mail1@gmail.com" per giocare!</div>
+            <div id="emailHelp" class="form-text text-white-50">Inserisci "mail1@gmail.com" per giocare!</div>
         </div>
-        <button type="button" class="btn btn-primary">
-            Controlla
-        </button>
+        <button type="button" class="btn btn-warning">Login</button>
+        <button type="button" class="btn btn-danger">Reset</button>
     </div>
   
   <!-- Modal -->

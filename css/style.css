@@ -1,0 +1,28 @@
+#hero{
+    width: 100%;
+    height: 40vh;
+    position: relative;
+}
+#hero-background,#hero-background img{
+    width: 100%;
+    height: 100%;
+}
+#hero-background img{
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+#hero-content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.ct-fs-large{
+    font-size: 3rem;
+}
+#mail{
+    max-width: 600px;
+    padding: 1rem;
+    margin: 0 auto;
+}
