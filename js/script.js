@@ -31,3 +31,4 @@ Tips of the day:
 */
 
 const validEmails = ["mail1@gmail.com","mail2@gmail.com","mail3@gmail.com"];
+let passedEmail = "mail1@gmail.com";
