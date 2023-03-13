@@ -21,8 +21,16 @@
 .ct-fs-large{
     font-size: 3rem;
 }
-#mail{
+#mail,#dice{
     max-width: 600px;
     padding: 1rem;
     margin: 0 auto;
+}
+.score{
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
 }

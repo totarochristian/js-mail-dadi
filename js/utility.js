@@ -29,6 +29,8 @@ function GetRandomInt(max,min) {
  * the method print "Same result, parity!".
  */
 function StartDiceGame(){
+    document.getElementById("mail").classList.toggle("d-none");
+    document.getElementById("dice").classList.toggle("d-none");
     let userNum = GetRandomInt(diceGameNumMax,diceGameNumMin);
     let computerNum = GetRandomInt(diceGameNumMax,diceGameNumMin);
     console.log(userNum>computerNum?"Player win!":(userNum!=computerNum?"Computer win!":"Same result, parity!"));

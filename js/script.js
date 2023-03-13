@@ -45,11 +45,11 @@ function Main(){
     let passedEmail = document.getElementById("exampleInputEmail1").value;
     console.log("Mail: " + passedEmail);
     if(CheckIfMailIsValid(passedEmail)){
-        console.log("The mail is valid.");
+        ShowModalMessage("La mail inserita è corretta!");
         StartDiceGame();
     }
     else
-        ShowModalMessage("The mail is not valid!");
+        ShowModalMessage("La mail inserita non è valida!");
 }
 
 document.getElementById("resetBtn").addEventListener("click",function(){
