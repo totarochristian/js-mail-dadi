@@ -27,6 +27,8 @@ Tips of the day:
 - Define an array with valid emails
 - Define a function to search in the array if the mail is valid or not
 - Add code to print if the mail is valid or not
+- Define function to get a random integer
+- Define function where put the dice game code
 ---------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------
@@ -34,6 +36,10 @@ Tips of the day:
 
 /** Array with valid emails */
 const validEmails = ["mail1@gmail.com","mail2@gmail.com","mail3@gmail.com"];
+/** Minimum number generable in the random function of the dice game */
+const diceGameNumMin = 1;
+/** Maximum number generable in the random function of the dice game */
+const diceGameNumMax = 6;
 
 /**
  * Function that search the passed string in the validEmails array and if found the same value, returns true, otherwise false
@@ -59,11 +65,15 @@ function GetRandomInt(max,min) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+function StartDiceGame(){
+
+}
+
 let passedEmail = "mail1@gmail.com";
 console.log("Mail: " + passedEmail);
 if(CheckIfMailIsValid(passedEmail)){
     console.log("The mail is valid");
-
+    StartDiceGame();
 }
 else
     console.log("The mail is not valid");
