@@ -33,3 +33,12 @@ function StartDiceGame(){
     let computerNum = GetRandomInt(diceGameNumMax,diceGameNumMin);
     console.log(userNum>computerNum?"Player win!":(userNum!=computerNum?"Computer win!":"Same result, parity!"));
 }
+
+/**
+ * FUnction that show a passed message as body text of a modal
+ * @param {string} message Message to show inside the modal
+ */
+function ShowModalMessage(message){
+    document.getElementById("modal-body-text").innerHTML = message;
+    $('#exampleModal').modal('show');
+}

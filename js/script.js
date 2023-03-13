@@ -47,7 +47,5 @@ if(CheckIfMailIsValid(passedEmail)){
     console.log("The mail is valid.");
     StartDiceGame();
 }
-else{
-    document.getElementById("modal-body-text").innerHTML = "The mail is not valid!";
-    $('#exampleModal').modal('show');
-}
+else
+    ShowModalMessage("The mail is not valid!");
