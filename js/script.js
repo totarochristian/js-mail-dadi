@@ -25,10 +25,28 @@ Tips of the day:
 ----------------------------------------------------   Program steps   ----------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------
 - Define an array with valid emails
+- Define a function to search in the array if the mail is valid or not
+- Add code to print if the mail is valid or not
 ---------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------
 */
 
+/** Array with valid emails */
 const validEmails = ["mail1@gmail.com","mail2@gmail.com","mail3@gmail.com"];
+
+/**
+ * Function that search the passed string in the validEmails array and if found the same value, returns true, otherwise false
+ * @param {string} passedEmail String that rapresent the mail to search
+ * @returns True if mail is founded, false otherwise
+ */
+function CheckIfMailIsValid(passedEmail){
+    for(let i=0; i<validEmails.length; i++)
+        if(validEmails[i] == passedEmail)
+            return true;
+    return false;
+}
+
 let passedEmail = "mail1@gmail.com";
+console.log("Mail: " + passedEmail);
+console.log("Is valid? " + CheckIfMailIsValid(passedEmail));
