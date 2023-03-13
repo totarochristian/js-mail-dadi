@@ -91,4 +91,15 @@ function PlayDiceGame(){
     ApplyResult("computer-score",computerNum,result==1);
     ApplyResult("player-score",userNum,result==0);
     ShowModalMessage(GetResultString(result));
+    PlayAudio(result==0);
+}
+
+/**
+ * Function that will play an audio (winner or loser audio).
+ * @param {boolean} winner Boolean that define if the music to be played is the winner or loser music.
+ */
+function PlayAudio(winner){
+    let audioToOpen = winner? "../assets/music/winner.flac" : "../assets/music/loser.wav";
+    var audio = new Audio(audioToOpen);
+    audio.play();
 }
