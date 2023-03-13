@@ -35,3 +35,11 @@
     background-color: white;
     color: black;
 }
+.winner{
+    background-color: green;
+    color: white;
+}
+.loser{
+    background-color: red;
+    color: white;
+}

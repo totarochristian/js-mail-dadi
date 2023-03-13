@@ -39,11 +39,40 @@ function ShowModalMessage(message){
     $('#exampleModal').modal('show');
 }
 
+function CheckGameResult(user, computer){
+    return user>computer?0:(user!=computer?1:2);
+}
+
+function GetResultString(result){
+    switch(result){
+        case 0: return playerWinMessage;
+        case 1: return computerWinMessage;
+        case 2: return parityMessage;
+    }
+}
+
+function ApplyResult(id,value,winner){
+    //Remove classes added previously
+    document.getElementById(id).classList.remove("winner");
+    document.getElementById(id).classList.remove("loser");
+    //Set the span value
+    document.getElementById(id).querySelector("span").innerHTML = value;
+    //Add the class to color the bg
+    if(winner)
+        document.getElementById(id).classList.add("winner");
+    else
+        document.getElementById(id).classList.add("loser");
+}
+
+/**
+ * Function called when the user click the startGame button.
+ * It will generate the two numbers and display the result on the related form.
+ */
 function PlayDiceGame(){
     let userNum = GetRandomInt(diceGameNumMax,diceGameNumMin);
     let computerNum = GetRandomInt(diceGameNumMax,diceGameNumMin);
-
-    document.getElementById("computer-score").innerHTML = computerNum;
-    document.getElementById("player-score").innerHTML = userNum;
-    ShowModalMessage(userNum>computerNum?playerWinMessage:(userNum!=computerNum?computerWinMessage:parityMessage));
+    let result = CheckGameResult(userNum,computerNum);
+    ApplyResult("computer-score",computerNum,result==1);
+    ApplyResult("player-score",userNum,result==0);
+    ShowModalMessage(GetResultString(result));
 }
