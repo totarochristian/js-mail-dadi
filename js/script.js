@@ -65,6 +65,12 @@ function GetRandomInt(max,min) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+/**
+ * Function that generate 2 random int from diceGameNumMin and diceGameNumMax, one for user and one for computer.
+ * If the user num is greater then the computers num but the 2 numbers are different, this method print "User win", otherwise,
+ * if the two number are different and the computer num is greater then the user num, the method print "Computer win!", otherwise,
+ * the method print "Same result, parity!".
+ */
 function StartDiceGame(){
     let userNum = GetRandomInt(diceGameNumMax,diceGameNumMin);
     let computerNum = GetRandomInt(diceGameNumMax,diceGameNumMin);
