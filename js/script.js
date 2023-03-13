@@ -44,10 +44,8 @@ const diceGameNumMax = 6;
 function Main(){
     let passedEmail = document.getElementById("exampleInputEmail1").value;
     console.log("Mail: " + passedEmail);
-    if(CheckIfMailIsValid(passedEmail)){
-        ShowModalMessage("La mail inserita è corretta!");
+    if(CheckIfMailIsValid(passedEmail))
         StartDiceGame();
-    }
     else
         ShowModalMessage("La mail inserita non è valida!");
 }
