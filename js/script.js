@@ -41,11 +41,18 @@ const diceGameNumMin = 1;
 /** Maximum number generable in the random function of the dice game */
 const diceGameNumMax = 6;
 
-let passedEmail = "mail1@gmail.com";
-console.log("Mail: " + passedEmail);
-if(CheckIfMailIsValid(passedEmail)){
-    console.log("The mail is valid.");
-    StartDiceGame();
+function Main(){
+    let passedEmail = document.getElementById("exampleInputEmail1").value;
+    console.log("Mail: " + passedEmail);
+    if(CheckIfMailIsValid(passedEmail)){
+        console.log("The mail is valid.");
+        StartDiceGame();
+    }
+    else
+        ShowModalMessage("The mail is not valid!");
 }
-else
-    ShowModalMessage("The mail is not valid!");
+
+document.getElementById("resetBtn").addEventListener("click",function(){
+    document.getElementById("exampleInputEmail1").value= "";
+});
+document.getElementById("loginBtn").addEventListener("click",Main);

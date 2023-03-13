@@ -1,7 +1,3 @@
-document.getElementById("resetBtn").addEventListener("click",function(){
-    document.getElementById("exampleInputEmail1").value= "";
-});
-
 /**
  * Function that search the passed string in the validEmails array and if found the same value, returns true, otherwise false
  * @param {string} passedEmail String that rapresent the mail to search
