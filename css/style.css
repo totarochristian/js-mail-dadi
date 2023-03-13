@@ -19,7 +19,8 @@
     left: 0;
 }
 .ct-fs-large{
-    font-size: 3rem;
+    font-size: 4rem;
+    text-shadow: 0 0 30px #888;
 }
 #mail,#dice{
     max-width: 600px;
